@@ -1,0 +1,9 @@
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Data\bin\Debug\Layer_Data.dll
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Data\bin\Debug\Layer_Data.pdb
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Data\bin\Debug\Layer_Entity.dll
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Data\bin\Debug\Layer_Entity.pdb
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Data\obj\Debug\Layer_Data.csprojAssemblyReference.cache
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Data\obj\Debug\Layer_Data.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Data\obj\Debug\Layer_Data.csproj.CopyComplete
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Data\obj\Debug\Layer_Data.dll
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Data\obj\Debug\Layer_Data.pdb

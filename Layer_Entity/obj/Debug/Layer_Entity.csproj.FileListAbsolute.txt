@@ -1,0 +1,6 @@
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Entity\bin\Debug\Layer_Entity.dll
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Entity\bin\Debug\Layer_Entity.pdb
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Entity\obj\Debug\Layer_Entity.csprojAssemblyReference.cache
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Entity\obj\Debug\Layer_Entity.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Entity\obj\Debug\Layer_Entity.dll
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Entity\obj\Debug\Layer_Entity.pdb

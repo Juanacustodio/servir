@@ -11,22 +11,17 @@ using Layer_Entity.entidades;
 
 namespace Layer_Data.procesos
 {
-    public class CarreraDao
+    public class CarreraDao: Readable<Carrera>
     {
         SqlConnection cn = conexion.Conexion.getCn();
+        helpers.BDHelper BDHelper = new helpers.BDHelper();
+
         string spLista = "usp_listCarrera";
         string spObtenerPorCodigo = "usp_codCarrera";
 
         public DataTable lista()
         {
-            DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand(spLista, cn);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-
-            return dt;
+            return BDHelper.execStoreProcedure(spLista);
         }
 
         public Carrera obtenerPorCodigo(string codigo)

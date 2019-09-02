@@ -1,13 +1,27 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Data;
+
 namespace Layer_Entity.entidades
 {
-    public class ORHEstado
+    public class ORHEstado: Entidad
     {
+        public ORHEstado(DataRow datos)
+        {
+            this.codigo = datos[0].ToString();
+            this.ruc = datos[1].ToString();
+            this.contrasena = datos[2].ToString();
+            this.nombre = datos[3].ToString();
+            this.correo = datos[4].ToString();
+            this.usuario = datos[5].ToString();
+            this.telefono = datos[6].ToString();
+            this.eliminado = bool.Parse(datos[7].ToString());
+        }
         public string codigo
         {
             get; set;

@@ -43,13 +43,20 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="conexion\Conexion.cs" />
+    <Compile Include="helpers\BDHelper.cs" />
     <Compile Include="procesos\CarreraDao.cs" />
     <Compile Include="procesos\CentroEstudiosDao.cs" />
     <Compile Include="procesos\OfertaDao.cs" />
     <Compile Include="procesos\ORHEstadoDao.cs" />
     <Compile Include="procesos\PostulanteDao.cs" />
+    <Compile Include="procesos\Readable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Layer_Entity\Layer_Entity.csproj">
+      <Project>{4aacc238-4e3e-4e1a-9501-ba44be872b0b}</Project>
+      <Name>Layer_Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

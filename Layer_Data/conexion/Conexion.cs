@@ -10,8 +10,9 @@ namespace Layer_Data.conexion
 {
     class Conexion
     {
-        // private static string url = "server=.;database=BD_Practicas;user ID=sa;password=12345678";
-        private static string url = "Server= localhost; Database= BD_Practicas; Integrated Security = SSPI";
+        static string name = "JUANA-CASA\\SQLEXPRESS";
+        private static string url = "server=" + name + ";database=BD_Practicas;Integrated Security=SSPI;";
+        // private static string url = "Data Source=localhost; Initial Catalog=BD_Practicas; Integrated Security=false;user id=JUANA-CASA/USUARIO ;password=";
 
         public static SqlConnection getCn()
         {

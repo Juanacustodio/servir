@@ -42,10 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="logica\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="logica\" />
+    <ProjectReference Include="..\Layer_Data\Layer_Data.csproj">
+      <Project>{2f96fe84-72ce-4d54-ba82-d75b3078e9e9}</Project>
+      <Name>Layer_Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Layer_Entity\Layer_Entity.csproj">
+      <Project>{4aacc238-4e3e-4e1a-9501-ba44be872b0b}</Project>
+      <Name>Layer_Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

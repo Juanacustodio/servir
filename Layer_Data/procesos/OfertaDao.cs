@@ -12,18 +12,13 @@ namespace Layer_Data.procesos
     class OfertaDao
     {
         SqlConnection cn = conexion.Conexion.getCn();
-        string spList = "usp_listOferta";
+        helpers.BDHelper BDHelper = new helpers.BDHelper();
+
+        string spLista = "usp_listOferta";
 
         public DataTable lista()
         {
-            DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand(spList, cn);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-
-            return dt;
+            return BDHelper.execStoreProcedure(spLista);
         }
     }
 }

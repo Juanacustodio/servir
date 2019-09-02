@@ -44,6 +44,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="entidades\Carrera.cs" />
     <Compile Include="entidades\CentroEstudios.cs" />
+    <Compile Include="entidades\Entidad.cs" />
     <Compile Include="entidades\Oferta.cs" />
     <Compile Include="entidades\ORHEstado.cs" />
     <Compile Include="entidades\Postulante.cs" />
