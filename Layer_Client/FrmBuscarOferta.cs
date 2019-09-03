@@ -78,5 +78,18 @@ namespace Layer_Client
                 e.Handled = true;
             }
         }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            DataTable dt = dgvOfertas.DataSource as DataTable;
+            bool actualizado = (new OfertaLog()).actualizarOfertas(dt);
+            if (actualizado) {
+                MessageBox.Show("Regitros actualizados.");
+            } else
+            {
+                MessageBox.Show("Hubo un error al actualizar algunos registros.");
+            }
+            llenarDgvOfertas();
+        }
     }
 }

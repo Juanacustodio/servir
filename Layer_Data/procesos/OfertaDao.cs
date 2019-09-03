@@ -18,6 +18,7 @@ namespace Layer_Data.procesos
 
         string spLista = "usp_listOferta";
         string spObtenerPorCodigo = "usp_codOferta";
+        string spActualizar = "usp_updateOferta";
         string spEliminar = "usp_deleteOferta";
 
         public DataTable lista()
@@ -38,6 +39,34 @@ namespace Layer_Data.procesos
             }
 
             return new Oferta(dt.Rows[0]);
+        }
+
+        public bool actualizarOferta(Oferta oferta)
+        {
+            try
+            {
+                string tipo = oferta.tipo ? "1" : "0";
+                string[][] array2D = new string[][] {
+                    new string[] { "@codOfe", oferta.codigo },
+                    new string[] { "@carrera", oferta.carrera },
+                    new string[] { "@area", oferta.area },
+                    new string[] { "@ciclo", oferta.ciclo },
+                    new string[] { "@tipo", tipo },
+                    new string[] { "@detalle", oferta.detalle },
+                    new string[] { "@subven", oferta.subvencion.ToString() },
+                    new string[] { "@habilidad", oferta.habilidades },
+                    new string[] { "@region", oferta.region },
+                    new string[] { "@Fcierre", oferta.fechaCierre.ToString(), helpers.BDHelper.type_datetime },
+                    new string[] { "@Elimin", oferta.eliminado.ToString() }
+                };
+                bool result = BDHelper.execStoreProcedureThatReturnBool(spActualizar, array2D);
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
         public bool eliminar(string codigo)

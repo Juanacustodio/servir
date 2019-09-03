@@ -17,3 +17,4 @@ C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client
 C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.pdb
 C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.FrmPrincipal.resources
 C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.FrmBuscarOferta.resources
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.FrmPublicarOferta.resources
