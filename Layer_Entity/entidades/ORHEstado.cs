@@ -11,6 +11,10 @@ namespace Layer_Entity.entidades
 {
     public class ORHEstado: Entidad
     {
+        public ORHEstado()
+        {
+
+        }
         public ORHEstado(DataRow datos)
         {
             this.codigo = datos[0].ToString();

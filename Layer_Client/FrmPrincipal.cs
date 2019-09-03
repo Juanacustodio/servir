@@ -29,10 +29,24 @@ namespace Layer_Client
 
         private void BtnBuscarOferta_Click(object sender, EventArgs e)
         {
-            FrmBuscarOferta buscarOferta = new FrmBuscarOferta();
-            buscarOferta.MdiParent = this;
-            buscarOferta.Dock = DockStyle.Fill;
-            buscarOferta.Show();
+            showForm(new FrmBuscarOferta());
+        }
+
+        private void BtnPublicarOferta_Click(object sender, EventArgs e)
+        {
+            showForm(new FrmPublicarOferta());
+        }
+
+        private void BtnAdministrar_Click(object sender, EventArgs e)
+        {
+            showForm(new FrmAdministrarORH());
+        }
+
+        private void showForm(Form form)
+        {
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
         }
     }
 }

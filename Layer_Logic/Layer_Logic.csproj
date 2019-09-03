@@ -45,6 +45,7 @@
     <Compile Include="logica\CarreraLog.cs" />
     <Compile Include="logica\Login.cs" />
     <Compile Include="logica\OfertaLog.cs" />
+    <Compile Include="logica\ORHEstadoLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

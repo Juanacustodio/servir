@@ -18,6 +18,7 @@ namespace Layer_Data.procesos
 
         string spLista = "usp_listOferta";
         string spObtenerPorCodigo = "usp_codOferta";
+        string spCrear = "usp_insertOferta";
         string spActualizar = "usp_updateOferta";
         string spEliminar = "usp_deleteOferta";
 
@@ -25,7 +26,16 @@ namespace Layer_Data.procesos
         {
             return BDHelper.execStoreProcedure(spLista);
         }
+        public DataTable listaVacia()
+        {
+            string[][] array2D = new string[][] {
+                new string[] { "@codOfe", "-" }
+            };
 
+            DataTable dt = BDHelper.execStoreProcedure(spObtenerPorCodigo, array2D);
+
+            return dt;
+        }
         public Oferta obtenerPorCodigo(string codigo)
         {
             string[][] array2D = new string[][] {
@@ -39,6 +49,33 @@ namespace Layer_Data.procesos
             }
 
             return new Oferta(dt.Rows[0]);
+        }
+        public bool crear(Oferta oferta)
+        {
+            try
+            {
+                string tipo = oferta.tipo ? "1" : "0";
+                string[][] array2D = new string[][] {
+                    new string[] { "@codOfe", oferta.codigo },
+                    new string[] { "@carrera", oferta.carrera },
+                    new string[] { "@area", oferta.area },
+                    new string[] { "@ciclo", oferta.ciclo },
+                    new string[] { "@tipo", tipo },
+                    new string[] { "@detalle", oferta.detalle },
+                    new string[] { "@subven", oferta.subvencion.ToString() },
+                    new string[] { "@habilidad", oferta.habilidades },
+                    new string[] { "@region", oferta.region },
+                    new string[] { "@fec_cier", oferta.fechaCierre.ToString(), helpers.BDHelper.type_datetime },
+                    new string[] { "@codORH", oferta.ORHEstado }
+                };
+                bool result = BDHelper.execStoreProcedureThatReturnBool(spCrear, array2D);
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
         public bool actualizarOferta(Oferta oferta)

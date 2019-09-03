@@ -16,14 +16,14 @@ namespace Layer_Entity.entidades
             this.carrera = datos[1].ToString();
             this.area = datos[2].ToString();
             this.ciclo = datos[3].ToString();
-            this.tipo = bool.Parse(datos[4].ToString());
+            this.tipo = Convert.ToBoolean(datos[4] is DBNull ? 0 : datos[4]);
             this.detalle = datos[5].ToString();
             this.subvencion = double.Parse(datos[6].ToString());
             this.habilidades = datos[7].ToString();
             this.region = datos[8].ToString();
             this.fechaCierre = DateTime.Parse(datos[9].ToString());
             this.ORHEstado = datos[10].ToString();
-            this.eliminado = bool.Parse(datos[11].ToString());
+            this.eliminado = Convert.ToBoolean(datos[11] is DBNull ? 0 : datos[11]);
         }
         public string codigo
         {

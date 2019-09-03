@@ -33,6 +33,7 @@
             this.ofertaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBuscarOferta = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPublicarOferta = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAdministrar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,8 @@
             // 
             // cuentaToolStripMenuItem
             // 
+            this.cuentaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAdministrar});
             this.cuentaToolStripMenuItem.Name = "cuentaToolStripMenuItem";
             this.cuentaToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.cuentaToolStripMenuItem.Text = "Cuenta";
@@ -74,6 +77,14 @@
             this.btnPublicarOferta.Name = "btnPublicarOferta";
             this.btnPublicarOferta.Size = new System.Drawing.Size(180, 22);
             this.btnPublicarOferta.Text = "Publicar";
+            this.btnPublicarOferta.Click += new System.EventHandler(this.BtnPublicarOferta_Click);
+            // 
+            // btnAdministrar
+            // 
+            this.btnAdministrar.Name = "btnAdministrar";
+            this.btnAdministrar.Size = new System.Drawing.Size(180, 22);
+            this.btnAdministrar.Text = "Administrar";
+            this.btnAdministrar.Click += new System.EventHandler(this.BtnAdministrar_Click);
             // 
             // FrmPrincipal
             // 
@@ -99,5 +110,6 @@
         private System.Windows.Forms.ToolStripMenuItem ofertaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnBuscarOferta;
         private System.Windows.Forms.ToolStripMenuItem btnPublicarOferta;
+        private System.Windows.Forms.ToolStripMenuItem btnAdministrar;
     }
 }

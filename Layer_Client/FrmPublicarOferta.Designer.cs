@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOfertas = new System.Windows.Forms.DataGridView();
             this.btnPublicar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOfertas)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvOfertas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(706, 341);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvOfertas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOfertas.Location = new System.Drawing.Point(47, 38);
+            this.dgvOfertas.Name = "dgvOfertas";
+            this.dgvOfertas.Size = new System.Drawing.Size(706, 341);
+            this.dgvOfertas.TabIndex = 0;
             // 
             // btnPublicar
             // 
@@ -49,6 +49,7 @@
             this.btnPublicar.TabIndex = 1;
             this.btnPublicar.Text = "Publicar ofertas";
             this.btnPublicar.UseVisualStyleBackColor = true;
+            this.btnPublicar.Click += new System.EventHandler(this.BtnPublicar_Click);
             // 
             // FrmPublicarOferta
             // 
@@ -56,17 +57,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnPublicar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOfertas);
             this.Name = "FrmPublicarOferta";
             this.Text = "FrmPublicarOferta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmPublicarOferta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOfertas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOfertas;
         private System.Windows.Forms.Button btnPublicar;
     }
 }

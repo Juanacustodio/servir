@@ -19,12 +19,31 @@ namespace Layer_Logic.logica
             return ofertaDao.lista();
         }
 
+        public DataTable obtenerListaVacia()
+        {
+            return ofertaDao.listaVacia();
+        }
+
         public bool actualizarOfertas(DataTable dt)
         {
             bool result = true;
             foreach (DataRow row in dt.Rows) {
                 Oferta oferta = new Oferta(row);
                 bool res = (new OfertaDao()).actualizarOferta(oferta);
+                if (!res) {
+                    result = false;
+                }
+            }
+
+            return result;
+        }
+
+        public bool crearOfertas(DataTable dt)
+        {
+            bool result = true;
+            foreach (DataRow row in dt.Rows) {
+                Oferta oferta = new Oferta(row);
+                bool res = (new OfertaDao()).crear(oferta);
                 if (!res) {
                     result = false;
                 }

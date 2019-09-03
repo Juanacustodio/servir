@@ -19,6 +19,7 @@ namespace Layer_Data.procesos
         string spLista = "usp_listORHEstado";
         string spValidar = "usp_validarORH";
         string spObtenerPorCodigo = "usp_codORHEstado";
+        string spActualizar = "usp_updateORHEstado";
 
         public DataTable lista()
         {
@@ -37,7 +38,29 @@ namespace Layer_Data.procesos
 
             return new ORHEstado(dt.Rows[0]);
         }
+        public bool actualizar(ORHEstado orh)
+        {
+            try
+            {
+                string[][] array2D = new string[][] {
+                    new string[] { "@codORH", orh.codigo },
+                    new string[] { "@ruc", orh.ruc },
+                    new string[] { "@contras", orh.contrasena },
+                    new string[] { "@nombre", orh.nombre },
+                    new string[] { "@correo", orh.correo },
+                    new string[] { "@usuario", "" },
+                    new string[] { "@telef", orh.telefono },
+                    new string[] { "@Elimin", "0" },
+                };
+                bool result = BDHelper.execStoreProcedureThatReturnBool(spActualizar, array2D);
 
+                return result;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
         public ORHEstado validarOHR(string correo, string contrasena)
         {
             string[][] array2D = new string[][] {
