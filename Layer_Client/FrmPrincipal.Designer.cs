@@ -31,9 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ofertaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.publicarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnBuscarOferta = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPublicarOferta = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,40 +56,30 @@
             // ofertaToolStripMenuItem
             // 
             this.ofertaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buscarToolStripMenuItem,
-            this.publicarToolStripMenuItem});
+            this.btnBuscarOferta,
+            this.btnPublicarOferta});
             this.ofertaToolStripMenuItem.Name = "ofertaToolStripMenuItem";
             this.ofertaToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.ofertaToolStripMenuItem.Text = "Oferta";
             // 
-            // buscarToolStripMenuItem
+            // btnBuscarOferta
             // 
-            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.buscarToolStripMenuItem.Text = "Buscar";
+            this.btnBuscarOferta.Name = "btnBuscarOferta";
+            this.btnBuscarOferta.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscarOferta.Text = "Buscar";
+            this.btnBuscarOferta.Click += new System.EventHandler(this.BtnBuscarOferta_Click);
             // 
-            // publicarToolStripMenuItem
+            // btnPublicarOferta
             // 
-            this.publicarToolStripMenuItem.Name = "publicarToolStripMenuItem";
-            this.publicarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.publicarToolStripMenuItem.Text = "Publicar";
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(84, 81);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(29, 13);
-            this.lblWelcome.TabIndex = 1;
-            this.lblWelcome.Text = "Hola";
-            this.lblWelcome.Click += new System.EventHandler(this.Label1_Click);
+            this.btnPublicarOferta.Name = "btnPublicarOferta";
+            this.btnPublicarOferta.Size = new System.Drawing.Size(180, 22);
+            this.btnPublicarOferta.Text = "Publicar";
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmPrincipal";
@@ -108,8 +97,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cuentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ofertaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem publicarToolStripMenuItem;
-        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.ToolStripMenuItem btnBuscarOferta;
+        private System.Windows.Forms.ToolStripMenuItem btnPublicarOferta;
     }
 }

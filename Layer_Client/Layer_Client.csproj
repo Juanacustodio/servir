@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBuscarOferta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarOferta.Designer.cs">
+      <DependentUpon>FrmBuscarOferta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="LoginInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBuscarOferta.resx">
+      <DependentUpon>FrmBuscarOferta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,6 +110,15 @@
       <Project>{a5cefeda-abfe-4ad7-80ce-3c1f9c5c762a}</Project>
       <Name>Layer_Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon edi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

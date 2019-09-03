@@ -24,7 +24,15 @@ namespace Layer_Client
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            lblWelcome.Text = "Hola " + LoginInfo.nombre + "!";
+            IsMdiContainer = true;
+        }
+
+        private void BtnBuscarOferta_Click(object sender, EventArgs e)
+        {
+            FrmBuscarOferta buscarOferta = new FrmBuscarOferta();
+            buscarOferta.MdiParent = this;
+            buscarOferta.Dock = DockStyle.Fill;
+            buscarOferta.Show();
         }
     }
 }
