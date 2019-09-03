@@ -31,13 +31,15 @@ namespace Layer_Client
         private void llenarDgvOfertas()
         {
             dgvOfertas.DataSource = (new OfertaLog()).obtenerLista();
-            DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();
-            deleteButton.Name = "Eliminar";
-            // deleteButton.Text = "X";
-            deleteButton.UseColumnTextForButtonValue = true;
-            dgvOfertas.Columns.Add(deleteButton);
-            dgvOfertas.CellClick += dgvOfertas_CellClick;
-            dgvOfertas.CellPainting += dgvOfertas_CellPainting;
+            if (dgvOfertas.Columns["Eliminar"] == null) {
+                DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();
+                deleteButton.Name = "Eliminar";
+                // deleteButton.Text = "X";
+                deleteButton.UseColumnTextForButtonValue = true;
+                dgvOfertas.Columns.Add(deleteButton);
+                dgvOfertas.CellClick += dgvOfertas_CellClick;
+                dgvOfertas.CellPainting += dgvOfertas_CellPainting;
+            }
         }
 
         private void dgvOfertas_CellClick(object sender, DataGridViewCellEventArgs e)
