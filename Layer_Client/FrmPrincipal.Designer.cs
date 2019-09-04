@@ -30,10 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAdministrar = new System.Windows.Forms.ToolStripMenuItem();
             this.ofertaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBuscarOferta = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPublicarOferta = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAdministrar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,13 @@
             this.cuentaToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.cuentaToolStripMenuItem.Text = "Cuenta";
             // 
+            // btnAdministrar
+            // 
+            this.btnAdministrar.Name = "btnAdministrar";
+            this.btnAdministrar.Size = new System.Drawing.Size(136, 22);
+            this.btnAdministrar.Text = "Administrar";
+            this.btnAdministrar.Click += new System.EventHandler(this.BtnAdministrar_Click);
+            // 
             // ofertaToolStripMenuItem
             // 
             this.ofertaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -68,29 +75,22 @@
             // btnBuscarOferta
             // 
             this.btnBuscarOferta.Name = "btnBuscarOferta";
-            this.btnBuscarOferta.Size = new System.Drawing.Size(180, 22);
+            this.btnBuscarOferta.Size = new System.Drawing.Size(117, 22);
             this.btnBuscarOferta.Text = "Buscar";
             this.btnBuscarOferta.Click += new System.EventHandler(this.BtnBuscarOferta_Click);
             // 
             // btnPublicarOferta
             // 
             this.btnPublicarOferta.Name = "btnPublicarOferta";
-            this.btnPublicarOferta.Size = new System.Drawing.Size(180, 22);
+            this.btnPublicarOferta.Size = new System.Drawing.Size(117, 22);
             this.btnPublicarOferta.Text = "Publicar";
             this.btnPublicarOferta.Click += new System.EventHandler(this.BtnPublicarOferta_Click);
-            // 
-            // btnAdministrar
-            // 
-            this.btnAdministrar.Name = "btnAdministrar";
-            this.btnAdministrar.Size = new System.Drawing.Size(180, 22);
-            this.btnAdministrar.Text = "Administrar";
-            this.btnAdministrar.Click += new System.EventHandler(this.BtnAdministrar_Click);
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 473);
+            this.ClientSize = new System.Drawing.Size(800, 502);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmPrincipal";

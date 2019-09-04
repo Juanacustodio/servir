@@ -18,6 +18,7 @@ namespace Layer_Data.procesos
 
         string spLista = "usp_listCarrera";
         string spObtenerPorCodigo = "usp_codCarrera";
+        string spActualizar = "usp_updateCarrera";
 
         public DataTable lista()
         {
@@ -35,6 +36,26 @@ namespace Layer_Data.procesos
             da.Fill(dt);
 
             return new Carrera(dt.Rows[0]);
+        }
+
+        public bool actualizar(Carrera carrera)
+        {
+            try
+            {
+                string[][] array2D = new string[][] {
+                    new string[] { "@codCar", carrera.codigo.ToString() },
+                    new string[] { "@nombre", carrera.nombre.ToString() },
+                    new string[] { "@codEst", carrera.CentroEstudios.ToString() },
+                    new string[] { "@Elimin", carrera.eliminado.ToString() }
+                };
+                bool result = BDHelper.execStoreProcedureThatReturnBool(spActualizar, array2D);
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }

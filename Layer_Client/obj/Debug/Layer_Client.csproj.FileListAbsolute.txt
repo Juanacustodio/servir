@@ -19,3 +19,6 @@ C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client
 C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.FrmBuscarOferta.resources
 C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.FrmPublicarOferta.resources
 C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.FrmAdministrarORH.resources
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.FrmAdminLogin.resources
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.FrmAdminPrincipal.resources
+C:\Users\USUARIO\Desktop\IDAT\CICLO 3\servir\Layer_Client\obj\Debug\Layer_Client.FrmBuscarCarrera.resources

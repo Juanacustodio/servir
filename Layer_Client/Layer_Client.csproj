@@ -58,11 +58,71 @@
     <Compile Include="FrmAdministrarORH.Designer.cs">
       <DependentUpon>FrmAdministrarORH.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminLogin.Designer.cs">
+      <DependentUpon>FrmAdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminPrincipal.Designer.cs">
+      <DependentUpon>FrmAdminPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarCarrera.Designer.cs">
+      <DependentUpon>FrmAgregarCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarCentroEstudios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarCentroEstudios.Designer.cs">
+      <DependentUpon>FrmAgregarCentroEstudios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarORH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarORH.Designer.cs">
+      <DependentUpon>FrmAgregarORH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarPostulante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarPostulante.Designer.cs">
+      <DependentUpon>FrmAgregarPostulante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarCarrera.Designer.cs">
+      <DependentUpon>FrmBuscarCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarCentroEstudios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarCentroEstudios.Designer.cs">
+      <DependentUpon>FrmBuscarCentroEstudios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBuscarOferta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBuscarOferta.Designer.cs">
       <DependentUpon>FrmBuscarOferta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarORH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarORH.Designer.cs">
+      <DependentUpon>FrmBuscarORH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarPostulante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarPostulante.Designer.cs">
+      <DependentUpon>FrmBuscarPostulante.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -87,6 +147,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAdministrarORH.resx">
       <DependentUpon>FrmAdministrarORH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminLogin.resx">
+      <DependentUpon>FrmAdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminPrincipal.resx">
+      <DependentUpon>FrmAdminPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarCarrera.resx">
+      <DependentUpon>FrmBuscarCarrera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarOferta.resx">
       <DependentUpon>FrmBuscarOferta.cs</DependentUpon>
