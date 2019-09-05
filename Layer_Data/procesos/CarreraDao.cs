@@ -11,18 +11,20 @@ using Layer_Entity.entidades;
 
 namespace Layer_Data.procesos
 {
-    public class CarreraDao: Readable<Carrera>
+    public class CarreraDao: BaseDao
     {
         SqlConnection cn = conexion.Conexion.getCn();
         helpers.BDHelper BDHelper = new helpers.BDHelper();
 
-        string spLista = "usp_listCarrera";
-        string spObtenerPorCodigo = "usp_codCarrera";
-        string spActualizar = "usp_updateCarrera";
 
-        public DataTable lista()
+        public CarreraDao()
         {
-            return BDHelper.execStoreProcedure(spLista);
+            codigo = "@codCar";
+            spLista = "usp_listCarrera";
+            spObtenerPorCodigo = "usp_codCarrera";
+            spActualizar = "usp_updateCarrera";
+            spCrear = "usp_insertCarrera";
+            spEliminar = "usp_deleteCarrera";
         }
 
         public Carrera obtenerPorCodigo(string codigo)
@@ -38,24 +40,31 @@ namespace Layer_Data.procesos
             return new Carrera(dt.Rows[0]);
         }
 
-        public bool actualizar(Carrera carrera)
+        public override string[][] parametrosCrear(DataRow row)
         {
-            try
-            {
-                string[][] array2D = new string[][] {
+            Carrera carrera = new Carrera(row);
+
+            string[][] array2D = new string[][] {
+                    new string[] { "@codCar", carrera.codigo },
+                    new string[] { "@nombre", carrera.nombre },
+                    new string[] { "@codEst", carrera.CentroEstudios },
+                };
+
+            return array2D;
+        }
+
+        public override string[][] parametrosActualizar(DataRow row)
+        {
+            Carrera carrera = new Carrera(row);
+
+            string[][] array2D = new string[][] {
                     new string[] { "@codCar", carrera.codigo.ToString() },
                     new string[] { "@nombre", carrera.nombre.ToString() },
                     new string[] { "@codEst", carrera.CentroEstudios.ToString() },
                     new string[] { "@Elimin", carrera.eliminado.ToString() }
                 };
-                bool result = BDHelper.execStoreProcedureThatReturnBool(spActualizar, array2D);
 
-                return result;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return array2D;
         }
     }
 }

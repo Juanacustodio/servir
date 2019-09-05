@@ -11,27 +11,11 @@ using Layer_Entity.entidades;
 
 namespace Layer_Logic.logica
 {
-    public class CarreraLog
+    public class CarreraLog: BaseLog
     {
-        public DataTable obtenerLista()
+        public CarreraLog()
         {
-            CarreraDao carreraDao = new CarreraDao();
-            return carreraDao.lista();
-        }
-
-        public bool actualizarCarreras(DataTable dt)
-        {
-            bool result = true;
-            foreach (DataRow row in dt.Rows) {
-                Carrera carrera = new Carrera(row);
-                bool res = (new CarreraDao()).actualizar(carrera);
-                if (!res)
-                {
-                    result = false;
-                }
-            }
-
-            return result;
+            dao = new CarreraDao();
         }
     }
 }

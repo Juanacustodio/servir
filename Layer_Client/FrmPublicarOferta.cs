@@ -27,7 +27,7 @@ namespace Layer_Client
         private void BtnPublicar_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvOfertas.DataSource as DataTable;
-            bool actualizado = (new OfertaLog()).crearOfertas(dt);
+            bool actualizado = (new OfertaLog()).crear(dt);
             if (actualizado) {
                 MessageBox.Show("Regitros creados.");
             }

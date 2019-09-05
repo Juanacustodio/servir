@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Data;
+
 namespace Layer_Entity.entidades
 {
     public class Entidad
@@ -12,5 +14,11 @@ namespace Layer_Entity.entidades
         {
 
         }
+
+        public Entidad(DataRow datos)
+        {
+            
+        }
+
     }
 }

@@ -10,6 +10,10 @@ namespace Layer_Entity.entidades
 {
     public class Carrera
     {
+        public Carrera()
+        {
+
+        }
         public Carrera(DataRow datos)
         {
             this.codigo = datos[0].ToString();

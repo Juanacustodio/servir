@@ -8,8 +8,12 @@ using System.Data;
 
 namespace Layer_Entity.entidades
 {
-    public class Oferta
+    public class Oferta: Entidad
     {
+        public Oferta()
+        {
+
+        }
         public Oferta(DataRow datos)
         {
             this.codigo = datos[0].ToString();
@@ -25,6 +29,7 @@ namespace Layer_Entity.entidades
             this.ORHEstado = datos[10].ToString();
             this.eliminado = Convert.ToBoolean(datos[11] is DBNull ? 0 : datos[11]);
         }
+
         public string codigo
         {
             get; set;

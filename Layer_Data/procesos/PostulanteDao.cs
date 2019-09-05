@@ -9,16 +9,14 @@ using System.Data;
 
 namespace Layer_Data.procesos
 {
-    class PostulanteDao
+    public class PostulanteDao: BaseDao
     {
         SqlConnection cn = conexion.Conexion.getCn();
         helpers.BDHelper BDHelper = new helpers.BDHelper();
 
-        string spLista = "usp_listPostulante";
-
-        public DataTable lista()
+        public PostulanteDao()
         {
-            return BDHelper.execStoreProcedure(spLista);
+            spLista = "usp_listPostulante";
         }
     }
 }

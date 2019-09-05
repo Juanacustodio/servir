@@ -84,7 +84,7 @@ namespace Layer_Client
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvOfertas.DataSource as DataTable;
-            bool actualizado = (new OfertaLog()).actualizarOfertas(dt);
+            bool actualizado = (new OfertaLog()).actualizar(dt);
             if (actualizado) {
                 MessageBox.Show("Regitros actualizados.");
             } else

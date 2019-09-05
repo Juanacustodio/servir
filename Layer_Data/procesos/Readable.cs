@@ -11,10 +11,12 @@ using Layer_Entity.entidades;
 
 namespace Layer_Data.procesos
 {
-    interface Readable<Entidad>
+    interface Readable
     {
         DataTable lista();
-
-        Entidad obtenerPorCodigo(string codigo);
+        DataTable listaVacia();
+        bool crear(DataRow row);
+        bool actualizar(DataRow row);
+        bool eliminar(string codigo);
     }
 }

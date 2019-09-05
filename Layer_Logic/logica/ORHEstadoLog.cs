@@ -9,8 +9,12 @@ using Layer_Data.procesos;
 
 namespace Layer_Logic.logica
 {
-    public class ORHEstadoLog
+    public class ORHEstadoLog: BaseLog
     {
+        public ORHEstadoLog()
+        {
+            dao = new ORHEstadoDao();
+        }
         public string[] obtenerPorCodigo(string codigo)
         {
             ORHEstado orh = (new ORHEstadoDao()).obtenerPorCodigo(codigo);

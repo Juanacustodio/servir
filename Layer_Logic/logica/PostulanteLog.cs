@@ -4,18 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Data;
-
 using Layer_Data.procesos;
 
 namespace Layer_Logic.logica
 {
-    public class OfertaLog: BaseLog
+    public class PostulanteLog: BaseLog
     {
-        public OfertaLog()
+        public PostulanteLog()
         {
-            dao = new OfertaDao();
+            dao = new PostulanteDao();
         }
-
     }
 }

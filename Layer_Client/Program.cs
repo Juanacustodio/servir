@@ -16,7 +16,7 @@ namespace Layer_Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAdminLogin());
+            Application.Run(new FrmLogin());
         }
     }
 }

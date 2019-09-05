@@ -11,35 +11,25 @@ using Layer_Entity.entidades;
 
 namespace Layer_Data.procesos
 {
-    public class OfertaDao: Readable<Oferta>
+    public class OfertaDao: BaseDao
     {
-        SqlConnection cn = conexion.Conexion.getCn();
         helpers.BDHelper BDHelper = new helpers.BDHelper();
 
-        string spLista = "usp_listOferta";
-        string spObtenerPorCodigo = "usp_codOferta";
-        string spCrear = "usp_insertOferta";
-        string spActualizar = "usp_updateOferta";
-        string spEliminar = "usp_deleteOferta";
 
-        public DataTable lista()
+        public OfertaDao()
         {
-            return BDHelper.execStoreProcedure(spLista);
+            codigo = "@codOfe";
+            spLista = "usp_listOferta";
+            spObtenerPorCodigo = "usp_codOferta";
+            spCrear = "usp_insertOferta";
+            spActualizar = "usp_updateOferta";
+            spEliminar = "usp_deleteOferta";
         }
-        public DataTable listaVacia()
-        {
-            string[][] array2D = new string[][] {
-                new string[] { "@codOfe", "-" }
-            };
 
-            DataTable dt = BDHelper.execStoreProcedure(spObtenerPorCodigo, array2D);
-
-            return dt;
-        }
         public Oferta obtenerPorCodigo(string codigo)
         {
             string[][] array2D = new string[][] {
-                new string[] { "@codOfe", codigo }
+                new string[] { this.codigo, codigo }
             };
 
             DataTable dt = BDHelper.execStoreProcedure(spObtenerPorCodigo, array2D);
@@ -50,17 +40,17 @@ namespace Layer_Data.procesos
 
             return new Oferta(dt.Rows[0]);
         }
-        public bool crear(Oferta oferta)
+
+        public override string[][] parametrosCrear(DataRow row)
         {
-            try
-            {
-                string tipo = oferta.tipo ? "1" : "0";
-                string[][] array2D = new string[][] {
+            Oferta oferta = new Oferta(row);
+
+            string[][] array2D = new string[][] {
                     new string[] { "@codOfe", oferta.codigo },
                     new string[] { "@carrera", oferta.carrera },
                     new string[] { "@area", oferta.area },
                     new string[] { "@ciclo", oferta.ciclo },
-                    new string[] { "@tipo", tipo },
+                    new string[] { "@tipo", oferta.tipo ? "1" : "0" },
                     new string[] { "@detalle", oferta.detalle },
                     new string[] { "@subven", oferta.subvencion.ToString() },
                     new string[] { "@habilidad", oferta.habilidades },
@@ -68,22 +58,16 @@ namespace Layer_Data.procesos
                     new string[] { "@fec_cier", oferta.fechaCierre.ToString(), helpers.BDHelper.type_datetime },
                     new string[] { "@codORH", oferta.ORHEstado }
                 };
-                bool result = BDHelper.execStoreProcedureThatReturnBool(spCrear, array2D);
 
-                return result;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return array2D;
         }
 
-        public bool actualizarOferta(Oferta oferta)
+        public override string[][] parametrosActualizar(DataRow row)
         {
-            try
-            {
-                string tipo = oferta.tipo ? "1" : "0";
-                string[][] array2D = new string[][] {
+            Oferta oferta = new Oferta(row);
+
+            string tipo = oferta.tipo ? "1" : "0";
+            string[][] array2D = new string[][] {
                     new string[] { "@codOfe", oferta.codigo },
                     new string[] { "@carrera", oferta.carrera },
                     new string[] { "@area", oferta.area },
@@ -96,32 +80,8 @@ namespace Layer_Data.procesos
                     new string[] { "@Fcierre", oferta.fechaCierre.ToString(), helpers.BDHelper.type_datetime },
                     new string[] { "@Elimin", oferta.eliminado.ToString() }
                 };
-                bool result = BDHelper.execStoreProcedureThatReturnBool(spActualizar, array2D);
 
-                return result;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
-        }
-
-        public bool eliminar(string codigo)
-        {
-            try
-            {
-                string[][] array2D = new string[][] {
-                    new string[] { "@codOfe", codigo },
-                    new string[] { "@Elimin", "1" }
-                };
-                DataTable dt = BDHelper.execStoreProcedure(spEliminar, array2D);
-
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return array2D;
         }
     }
 }

@@ -83,9 +83,8 @@ namespace Layer_Client
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             DataTable dt = dgvCarrera.DataSource as DataTable;
-            bool actualizado = (new CarreraLog()).actualizarCarreras(dt);
-            if (actualizado)
-            {
+            bool actualizado = (new CarreraLog()).actualizar(dt);
+            if (actualizado) {
                 MessageBox.Show("Regitros actualizados.");
             }
             else

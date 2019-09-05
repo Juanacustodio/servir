@@ -44,6 +44,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="conexion\Conexion.cs" />
     <Compile Include="helpers\BDHelper.cs" />
+    <Compile Include="procesos\BaseDao.cs" />
     <Compile Include="procesos\CarreraDao.cs" />
     <Compile Include="procesos\CentroEstudiosDao.cs" />
     <Compile Include="procesos\OfertaDao.cs" />
